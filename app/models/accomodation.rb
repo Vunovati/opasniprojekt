@@ -30,6 +30,8 @@ class Accomodation < ActiveRecord::Base
 							         :numericality => true
 	validates :adress_line,          :presence => true, :uniqueness => { :case_sensitive => false }
 
+
+	self.per_page = 10 # number of recorings paginated
 end
 # == Schema Information
 #

@@ -1,5 +1,10 @@
 class AccomodationsController < ApplicationController
   def index
+    @accomodations = Accomodation.paginate(:page => params[:page]) 
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @accomodations }
+    end
   end
 
   def show
