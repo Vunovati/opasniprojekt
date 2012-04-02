@@ -30,8 +30,6 @@ class Accomodation < ActiveRecord::Base
 							         :numericality => true
 	validates :adress_line,          :presence => true, :uniqueness => { :case_sensitive => false }
 
-                              
-
 end
 # == Schema Information
 #

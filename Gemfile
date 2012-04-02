@@ -20,8 +20,8 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
   
-  # gem 'twitter-bootstrap-rails'
-  gem 'bootstrap-sass', '2.0.0'
+  gem 'twitter-bootstrap-rails'
+  # gem 'bootstrap-sass', '2.0.0'
 end
 
 gem 'jquery-rails'
