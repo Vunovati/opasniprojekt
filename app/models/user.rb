@@ -12,11 +12,14 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :name, :surname, :email
+  attr_accessible :name, :surname, :email, :password, :password_confirmation
+  has_secure_password
 
   validates :name, presence: true, length: {maximum: 50} 
   validates :surname, presence: true, length: {maximum: 100}
   #VALID_EMAIL_REGEX = /^(|(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6})$/i
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
+  validates :password, length: {minimum: 6}
+  validates :password_confirmation, presence: true
 end
