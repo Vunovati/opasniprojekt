@@ -1,6 +1,12 @@
 Opasniprojekt::Application.routes.draw do
   
+  root :to => 'accomodations#new'
+
   resources :accomodations
+
+  get "users/new"
+
+  match '/signup', to: 'users#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
