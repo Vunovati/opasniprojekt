@@ -10,7 +10,7 @@ gem 'rspec-rails', '2.8.1'
 
 # gem "execjs"
 
-# gem "therubyracer", :require => 'v8'
+ gem "therubyracer", :require => 'v8'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -50,4 +50,5 @@ end
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'factory_girl_rails', '1.4.0'
 end
