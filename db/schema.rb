@@ -11,25 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-
-ActiveRecord::Schema.define(:version => 20120401182618) do
-
-  create_table "users", :force => true do |t|
-    t.string   "name"
-    t.string   "surname"
-    t.string   "email"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-    t.string   "password_digest"
-  end
-
-  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
-
+ActiveRecord::Schema.define(:version => 20120403205424) do
 
   create_table "accomodations", :force => true do |t|
     t.string   "property_type"
     t.integer  "accomodates"
-    t.string   "type"
+    t.string   "accomodation_type"
     t.integer  "nightly_rate"
     t.string   "adress_line"
     t.string   "country"
@@ -46,5 +33,16 @@ ActiveRecord::Schema.define(:version => 20120401182618) do
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
   end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "surname"
+    t.string   "email"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "password_digest"
+  end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
 
 end

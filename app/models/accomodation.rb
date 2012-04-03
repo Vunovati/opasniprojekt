@@ -1,13 +1,12 @@
 class Accomodation < ActiveRecord::Base
-	attr_accessible :property_type, :accomodates, :type, :nightly_rate, :adress_line, :country, :city, :zip_code, :contact_email, :contact_phone, :contact_phone2, :pets_allowed, :size,
-	:number_of_bathrooms, :number_of_bedrooms, :number_of_beds
+	attr_accessible :property_type, :accomodates, :accomodation_type, :nightly_rate, :adress_line, :country, :city, :zip_code, :contact_email, :contact_phone, :contact_phone2, :pets_allowed, :size, :number_of_bathrooms, :number_of_bedrooms, :number_of_beds
 
 	email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	
 	validates :property_type,        :presence => true
 	validates :accomodates,          :presence => true, 
 	                                 :numericality => true
-	validates :type,                 :presence => true
+	validates :accomodation_type,    :presence => true
 	validates :nightly_rate,         :presence => true, 
 							         :numericality => true
 	validates :country,              :presence => true
