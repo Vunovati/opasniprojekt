@@ -51,4 +51,5 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
   gem 'factory_girl_rails', '1.4.0'
+  gem 'capybara', '1.1.2'
 end
