@@ -1,5 +1,11 @@
 Opasniprojekt::Application.routes.draw do
   resources :users
+  
+  root :to => 'accomodations#new'
+
+  resources :accomodations
+
+ # get "users/new"
 
   match '/signup', to: 'users#new'
 

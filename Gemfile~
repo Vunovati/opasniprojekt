@@ -7,8 +7,13 @@ gem 'rails', '3.2.2'
 
 gem "execjs"
 
-gem "therubyracer", :require => 'v8'
+<<<<<<< HEAD
+# gem "execjs"
 
+ gem "therubyracer", :require => 'v8'
+=======
+gem "therubyracer", :require => 'v8'
+>>>>>>> 1af904ab69ad8d37696066cb78ebccdab0826568
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -50,15 +55,19 @@ end
 
 # Test gems on Linux
 group :test do
+<<<<<<< HEAD
   # Pretty printed test output
   gem 'turn', :require => false
   gem 'factory_girl_rails', '1.4.0'
   gem 'capybara', '1.1.2'
+=======
   gem 'rspec-rails', '2.9.0'
+  gem 'capybara', '1.1.2'
   gem 'rb-inotify', '0.8.8'
   gem 'libnotify', '0.5.9'
 end 
 
 group :production do
   gem 'pg', '0.12.2'
+>>>>>>> 1af904ab69ad8d37696066cb78ebccdab0826568
 end
