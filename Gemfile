@@ -5,7 +5,7 @@ gem 'rails', '3.2.2'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem "execjs"
+#gem "execjs"
 
 gem "therubyracer", :require => 'v8'
 
@@ -54,9 +54,9 @@ group :test do
   gem 'turn', :require => false
   gem 'factory_girl_rails', '1.4.0'
   gem 'capybara', '1.1.2'
-  gem 'rspec-rails', '2.9.0'
   gem 'rb-inotify', '0.8.8'
   gem 'libnotify', '0.5.9'
+  gem 'rspec-rails', '2.9.0'
 end 
 
 group :production do
