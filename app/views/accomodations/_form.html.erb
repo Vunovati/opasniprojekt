@@ -1,123 +1,25 @@
-<%= form_for @accomodation, :html => { :class => 'form-horizontal' } do |f| %>
+<legend><%= controller.action_name.capitalize %> Accomodation</legend>
 
-  <fieldset>
-    <legend><%= controller.action_name.capitalize %> Accomodation</legend>
-
-    <div class="control-group">
-      <%= f.label :property_type, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.select :property_type, "<option>Appartment</option><option>House</option><option>Cabin</option><option>Villa</option><option>Hotel</option><option>Hostel</option>".html_safe, :multiple => true, :class => 'select' %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= f.label :type, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.select :accomodation_type, "<option>Private room</option><option>Shared room</option><option>Entire property</option>".html_safe, :multiple => true, :class => 'select' %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= f.label :accomodates, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.text_field :accomodates, :class => 'text_field' %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= f.label :nightly_rate, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.text_field :nightly_rate, :class => 'text_field' %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= f.label :adress_line, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.text_field :adress_line, :class => 'text_field' %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= f.label :country, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.text_field :country, :class => 'text_field' %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= f.label :city, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.text_field :city, :class => 'text_field' %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= f.label :zip_code, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.text_field :zip_code, :class => 'text_field' %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= f.label :contact_email, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.email_field :contact_email, :class => 'text_field' %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= f.label :contact_phone, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.phone_field :contact_phone, :class => 'text_field' %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= f.label :contact_phone2, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.phone_field :contact_phone2, :class => 'text_field' %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= f.label :pets_allowed, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.check_box :pets_allowed, :class => 'checkbox' %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= f.label :size, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.text_field :size, :class => 'text_field' %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= f.label :number_of_bathrooms, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.range_field :number_of_bathrooms, :class => 'text_field' %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= f.label :number_of_bedrooms, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.range_field :number_of_bedrooms, :class => 'text_field' %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= f.label :number_of_beds, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.number_field :number_of_beds, :class => 'text_field' %>
-      </div>
-    </div>
-
-    <div class="form-actions">
-      <%= f.submit nil, :class => 'btn btn-primary' %>
-      <%= link_to 'Cancel', accomodations_path, :class => 'btn' %>
-    </div>
-  </fieldset>
+<%= semantic_form_for @accomodation, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.inputs :name => "Basic Options", :id => "basic" do %>
+      <%= f.input :property_type, :collection => ["Appartment", "House", "Cabin", "Villa", "Hotel"], :label => "Property type", :hint => "Type of property where accomodation is in"%>
+      <%= f.input :accomodation_type, :collection => ["Private room", "Shared room"], :label => "Accomodation type", :hint => "Where the guests will be staying"%>
+      <%= f.input :accomodates, :hint => "Maximum number of guests" %>
+      <%= f.input :nightly_rate, :as => :number %>
+      <%= f.input :country, :as => :string %>
+      <%= f.input :city %>
+      <%= f.input :adress_line, :label => "Address line", :hint => "npr. Ulica Baruna Filipovića 18" %>
+      <%= f.input :zip_code, :label => "Zip code", :as => :number, :hint => "npr. 10000" %>
+      <%= f.input :contact_email, :as => :email %>
+      <%= f.input :contact_phone, :as => :phone %>
+      <%= f.input :contact_phone2, :label => "Secondary contact phone", :as => :phone %>
+      <%= f.input :size, :as => :number, :hint => "In square meters" %>
+      <%= f.input :number_of_bathrooms, :as => :range %>
+      <%= f.input :number_of_bedrooms, :as => :range %>
+      <%= f.input :number_of_beds, :as => :range %>
+      <%= f.input :pets_allowed, :as => :radio, :collection => ["Yes!", "No"] %>
+  <% end %>
+  <%= f.buttons do %>
+      <%= f.commit_button :submit, :button_html => { :class => "btn btn-primary", :disable_with => 'Wait...' } %>
+  <% end %>
 <% end %>

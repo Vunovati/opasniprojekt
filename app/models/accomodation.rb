@@ -39,7 +39,7 @@ end
 #  id                  :integer         not null, primary key
 #  property_type       :string(255)
 #  accomodates         :integer
-#  type                :string(255)
+#  accomodation_type   :string(255)
 #  nightly_rate        :integer
 #  adress_line         :string(255)
 #  country             :string(255)

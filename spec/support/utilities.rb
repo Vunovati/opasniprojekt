@@ -1,5 +1,5 @@
 def full_title(page_title)
-  base_title = "Opasni projekt"
+  base_title = "Zimmer Frei"
   if page.title.empty?
     base_title
   else

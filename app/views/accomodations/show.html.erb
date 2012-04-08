@@ -1,2 +1,36 @@
-<h1>Accomodations#show</h1>
-<p>Find me in app/views/accomodations/show.html.erb</p>
+#  property_type       :string(255)
+#  accomodates         :integer
+#  accomodation_type   :string(255)
+#  nightly_rate        :integer
+#  adress_line         :string(255)
+#  country             :string(255)
+#  city                :string(255)
+#  zip_code            :integer
+#  contact_email       :string(255)
+#  contact_phone       :integer
+#  contact_phone2      :integer
+#  pets_allowed        :boolean
+#  size                :integer
+#  number_of_bathrooms :integer
+#  number_of_bedrooms  :integer
+#  number_of_beds      :string(255)
+
+<h1><%=@accomodation.accomodation_type %> for <%=@accomodation.accomodates %> in <%=@accomodation.city %> </h1>
+
+
+<p>
+  <b>Location </b>
+  <%=@accomodation.city %>, <%=@accomodation.country %>
+</p>
+
+<p>
+  <b>Address</b><br>
+  <%= @accomodation.adress_line %>, <%= @accomodation.zip_code %>, <%= @accomodation.city %>, <%= @accomodation.country %>, 
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', accomodations_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_accomodation_path(@accomodation), :class => 'btn' %>
+  <%= link_to 'Delete', accomodation_path(@accomodation), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>
+

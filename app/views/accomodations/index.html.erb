@@ -15,7 +15,7 @@
       <td><%= link_to accomodation.city, accomodation_path(accomodation) %></td>
       <td><%= accomodation.accomodates %></td>
       <td><%= accomodation.accomodation_type %></td>
-      <td id ="accomodation<%= accomodation.id %>" >
+      <td id ="accomodation_<%= accomodation.id %>" >
         <%= link_to 'Edit', edit_accomodation_path(accomodation), :class => 'btn btn-mini' %>
         <%= link_to 'Destroy', accomodation_path(accomodation), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger'%>
       </td>

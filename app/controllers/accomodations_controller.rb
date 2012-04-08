@@ -36,8 +36,7 @@ class AccomodationsController < ApplicationController
 
     respond_to do |format|
       if @accomodation.save
-        format.html { redi
-          rect_to @accomodation, notice: 'Accomodation was successfully created.' }
+        format.html { redirect_to @accomodation, notice: 'Accomodation was successfully created.' }
         format.json { render json: @accomodation, status: :created, location: @accomodation }
       else
         format.html { render action: "new" }
@@ -69,7 +68,7 @@ class AccomodationsController < ApplicationController
     @accomodation.destroy
 
     respond_to do |format|
-      format.html { redirect_to accomodations_url, :notice => @accomodation.city + " " + @accomodation.country + " deleted" }
+      format.html { redirect_to accomodations_url, :notice => @accomodation.adress_line + " " + @accomodation.city + " deleted" }
       format.json { head :no_content }
     end
   end
