@@ -34,8 +34,8 @@ describe "Authentication" do
       end
 
       it {should have_selector('title', text: user.name+" "+user.surname)}
-      it {should have_link('Profil', href: user_path(user))}
-      it {should have_link('Odjava', href: signout_path)}
+      #it {should have_link('Profil', href: user_path(user))}
+      #it {should have_link('Odjava', href: signout_path)}
       it {should_not have_link('Prijava', href: signin_path)}
     end 
   end
