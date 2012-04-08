@@ -1,4 +1,7 @@
 <%= provide(:title, 'Sign up') %>
+<head>
+  <title><%= yield(:title) %></title>
+</head>
 <h1>Sign up</h1>
 
 <div class="row">
@@ -20,7 +23,7 @@
       <%= f.label :password_confirmation, "Potvrda lozinke" %>
       <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Create my account", :class => "btn btn-large btn-primary" %>
+      <%= f.submit "Otvori korisnički račun", :class => "btn btn-large btn-primary" %>
     <% end %>
   </div>
 </div>

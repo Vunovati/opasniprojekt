@@ -1,2 +1,21 @@
 <% provide(:title, "Prijava") %>
+<head>
+  <title><%= yield(:title) %></title>
+</head>
 <h1>Prijava</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(:session, url: sessions_path) do |f| %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password, "Lozinka" %>
+      <%= f.password_field :password %>
+
+      <%= f.submit "Prijava", :class => "btn btn-large btn-primary" %>
+    <% end %>
+    <p>Novi korisnik? <%= link_to "Prijavite se!", signup_path %></p>
+  </div>
+</div>
