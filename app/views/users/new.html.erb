@@ -1,3 +1,22 @@
 <%= provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+  
+<div class="well form">
+  <%= render 'shared/error_messages' %>
+  <div class="control-group">
+    <%= semantic_form_for @user, :html => { :class => 'form-horizontal' } do |f| %>
+      <%= f.inputs do %>
+        <%= f.input :name, :label => "First name" %>
+        <%= f.input :surname, :label => "Last name" %>
+        <%= f.input :email, :as => :email %>
+        <%= f.input :password %>
+        <%= f.input :password_confirmation, :as => :password %>
+      <% end %>
+      <div class="form-actions">
+      <%= f.buttons do %>
+        <%= f.commit_button :submit, :button_html => { :class => "btn btn-primary", :disable_with => 'Wait...' } %>
+      <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

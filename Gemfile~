@@ -5,10 +5,15 @@ gem 'rails', '3.2.2'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-#gem "execjs"
+gem "execjs"
 
+<<<<<<< HEAD
+# gem "execjs"
+
+ gem "therubyracer", :require => 'v8'
+=======
 gem "therubyracer", :require => 'v8'
-
+>>>>>>> 1af904ab69ad8d37696066cb78ebccdab0826568
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -25,8 +30,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'formtastic'
-gem 'formtastic-bootstrap'
+
 gem 'bootstrap-will_paginate'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.1'
@@ -45,22 +49,25 @@ group :development do
   gem 'gollum'
   gem 'RedCloth'
   gem 'annotate', '2.4.1.beta1'
-  gem 'faker', '0.3.1'
+  gem 'rspec-rails', '2.9.0'
+  gem 'guard-rspec', '0.5.5'
 end
 
-
-gem "rspec-rails", :group => [:test, :development]
 # Test gems on Linux
 group :test do
+<<<<<<< HEAD
   # Pretty printed test output
   gem 'turn', :require => false
   gem 'factory_girl_rails', '1.4.0'
   gem 'capybara', '1.1.2'
-  gem 'guard-rspec', '0.5.5'
+=======
+  gem 'rspec-rails', '2.9.0'
+  gem 'capybara', '1.1.2'
   gem 'rb-inotify', '0.8.8'
   gem 'libnotify', '0.5.9'
 end 
 
 group :production do
   gem 'pg', '0.12.2'
+>>>>>>> 1af904ab69ad8d37696066cb78ebccdab0826568
 end
