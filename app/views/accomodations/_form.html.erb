@@ -1,18 +1,18 @@
 <legend><%= controller.action_name.capitalize %> Accomodation</legend>
 
 <%= semantic_form_for @accomodation, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.inputs :name => "Basic Options", :id => "basic" do %>
-      <%= f.input :property_type, :collection => ["Appartment", "House", "Cabin", "Villa", "Hotel"], :label => "Property type", :hint => "Type of property where accomodation is in"%>
-      <%= f.input :accomodation_type, :collection => ["Private room", "Shared room"], :label => "Accomodation type", :hint => "Where the guests will be staying"%>
+  <%= f.inputs do %>
+      <%= f.input :property_type, :collection => ["Appartment", "House", "Cabin", "Villa", "Hotel"], :hint => "Type of property where accomodation is in"%>
+      <%= f.input :accomodation_type, :collection => ["Private room", "Shared room"], :hint => "Where the guests will be staying"%>
       <%= f.input :accomodates, :hint => "Maximum number of guests" %>
       <%= f.input :nightly_rate, :as => :number %>
       <%= f.input :country, :as => :string %>
       <%= f.input :city %>
-      <%= f.input :adress_line, :label => "Address line", :hint => "npr. Ulica Baruna Filipovića 18" %>
-      <%= f.input :zip_code, :label => "Zip code", :as => :number, :hint => "npr. 10000" %>
+      <%= f.input :adress_line, :hint => "npr. Ulica Baruna Filipovića 18" %>
+      <%= f.input :zip_code, :as => :number, :hint => "npr. 10000" %>
       <%= f.input :contact_email, :as => :email %>
       <%= f.input :contact_phone, :as => :phone %>
-      <%= f.input :contact_phone2, :label => "Secondary contact phone", :as => :phone %>
+      <%= f.input :contact_phone2,:as => :phone %>
       <%= f.input :size, :as => :number, :hint => "In square meters" %>
       <%= f.input :number_of_bathrooms, :as => :range %>
       <%= f.input :number_of_bedrooms, :as => :range %>

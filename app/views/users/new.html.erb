@@ -1,13 +1,13 @@
 <%= provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
   
-<div class="well form">
+<div class="form">
   <%= render 'shared/error_messages' %>
   <div class="control-group">
     <%= semantic_form_for @user, :html => { :class => 'form-horizontal' } do |f| %>
       <%= f.inputs do %>
-        <%= f.input :name, :label => "First name" %>
-        <%= f.input :surname, :label => "Last name" %>
+        <%= f.input :name %>
+        <%= f.input :surname %>
         <%= f.input :email, :as => :email %>
         <%= f.input :password %>
         <%= f.input :password_confirmation, :as => :password %>

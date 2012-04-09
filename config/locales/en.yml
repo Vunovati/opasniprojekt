@@ -1,5 +1,26 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+    formtastic:
+      labels:
+        user:
+          name: "First name"
+          surname: "Last name"
+          email: "Email address"
+          password: "Passphrase"
+          password_confirmation: "Repeat passphrase"
+        accomodation: 
+          property_type: "Property type"
+		      accomodates: "Accomodates"
+		      accomodation_type: "Accomodation type"
+		      nightly_rate: "Nightly rate"
+		      adress_line: "Adress line"
+		      country: "Country"
+		      city: "City"
+		      zip_code: "Zip code"
+		      contact_email: "Contact email"
+		      contact_phone: "Contact phone"
+		      contact_phone2: "Secondary contact phone"
+		      pets_allowed: "Pets allowed"
+		      size: "Size"
+		      number_of_bathrooms: "Number of bathrooms"
+		      number_of_bedrooms: "Number of bedrooms"
+		      number_of_beds: "Number of beds"

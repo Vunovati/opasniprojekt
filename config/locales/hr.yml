@@ -1,0 +1,26 @@
+ hr:
+    formtastic:
+      labels:
+        user:
+          name: "Ime"
+          surname: "Prezime"
+          email: "Email adresa"
+          password: "Zaporka"
+          password_confirmation: "Ponovite zaporku"
+        accomodation:
+          property_type: "Property type"
+          accomodates: "Accomodates"
+          accomodation_type: "Accomodation type"
+          nightly_rate: "Nightly rate"
+          adress_line: "Adress line"
+          country: "Country"
+          city: "City"
+          zip_code: "Zip code"
+          contact_email: "Contact email"
+          contact_phone: "Contact phone"
+          contact_phone2: "Secondary contact phone"
+          pets_allowed: "Pets allowed"
+          size: "Size"
+          number_of_bathrooms: "Number of bathrooms"
+          number_of_bedrooms: "Number of bedrooms"
+          number_of_beds: "Number of beds"

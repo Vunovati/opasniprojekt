@@ -32,10 +32,14 @@
 			<div class="row">
 				<div class="span9">
 					<%= render :partial => "shared/flash_messages", :locals => {:flash => flash} %> 
-					<%= yield %>
+					<div class="well">
+						<%= yield %>
+					</div>
 				</div>
 				<div class="span3">
-					Some commertial stuff
+					<div class="well">
+						Some commertial stuff
+					</div>
 				</div>
 			</div>
 		</div>
