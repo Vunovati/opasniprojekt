@@ -29,14 +29,20 @@ describe "Authentication" do
       let(:user) {FactoryGirl.create(:user)}
       before do
         fill_in "Email", with: user.email
-        fill_in "Lozinka", with: user.password
-        click_button "Prijava"
+        fill_in "Password", with: user.password
+        click_button "Sign up"
       end
 
       it {should have_selector('title', text: user.name+" "+user.surname)}
       #it {should have_link('Profil', href: user_path(user))}
       #it {should have_link('Odjava', href: signout_path)}
       it {should_not have_link('Prijava', href: signin_path)}
+
+      #describe "followed by signout" do
+      #  before {click_link('Sign out')}
+
+      #  it {should have_link('Sign in')}
+      #end
     end 
   end
 end

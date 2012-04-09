@@ -8,22 +8,22 @@
   <div class="span6 offset3">
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
-      <%= f.label :name, "Ime" %>
+      <%= f.label :name %>
       <%= f.text_field :name %>
 
-      <%= f.label :surname, "Prezime" %>
+      <%= f.label :surname %>
       <%= f.text_field :surname %>
 
       <%= f.label :email %>
       <%= f.text_field :email %>
 
-      <%= f.label :password, "Lozinka" %>
+      <%= f.label :password %>
       <%= f.password_field :password %>
 
-      <%= f.label :password_confirmation, "Potvrda lozinke" %>
+      <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Otvori korisnicki racun", :class => "btn btn-large btn-primary" %>
+      <%= f.submit "Create my account", :class => "btn btn-large btn-primary" %>
     <% end %>
   </div>
 </div>
