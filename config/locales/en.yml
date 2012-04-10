@@ -1,26 +1,35 @@
 en:
-    formtastic:
-      labels:
-        user:
-          name: "First name"
-          surname: "Last name"
-          email: "Email address"
-          password: "Passphrase"
-          password_confirmation: "Repeat passphrase"
-        accomodation: 
-          property_type: "Property type"
-		      accomodates: "Accomodates"
-		      accomodation_type: "Accomodation type"
-		      nightly_rate: "Nightly rate"
-		      adress_line: "Adress line"
-		      country: "Country"
-		      city: "City"
-		      zip_code: "Zip code"
-		      contact_email: "Contact email"
-		      contact_phone: "Contact phone"
-		      contact_phone2: "Secondary contact phone"
-		      pets_allowed: "Pets allowed"
-		      size: "Size"
-		      number_of_bathrooms: "Number of bathrooms"
-		      number_of_bedrooms: "Number of bedrooms"
-		      number_of_beds: "Number of beds"
+  accomodation: "Accomodation"
+  formtastic:
+    titles:
+      sign_up: "Sign up"
+    labels:
+      user:
+        name:                  "First name"
+        surname:               "Last name"
+        email:                 "Email address"
+        password:              "Password"
+        password_confirmation: "Password confirmation" 
+      accomodation:
+        property_type:         "Property type"
+        accomodates:           "Accomodates"
+        accomodation_type:     "Accomodation type"
+        nightly_rate:          "Nightly rate"
+        adress_line:           "Adress line"
+        country:               "Country"
+        city:                  "City"
+        zip_code:              "Zip code"
+        contact_email:         "Contact email"
+        contact_phone:         "Contact phone"
+        contact_phone2:        "Secondary contact phone"
+        pets_allowed:          "Pets allowed"
+        size:                  "Size"
+        number_of_bathrooms:   "Number of bathrooms"
+        number_of_bedrooms:    "Number of bedrooms"
+        number_of_beds:        "Number of beds"
+    actions:
+      create:                "Create my %{model}"
+      update:                "Save changes"
+      reset:                 "Reset form"
+      cancel:                "Cancel and go back"
+      dummie:                "Launch!"
