@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120403205424) do
+ActiveRecord::Schema.define(:version => 20120412201114) do
 
   create_table "accomodations", :force => true do |t|
     t.string   "property_type"
@@ -30,8 +30,12 @@ ActiveRecord::Schema.define(:version => 20120403205424) do
     t.integer  "number_of_bathrooms"
     t.integer  "number_of_bedrooms"
     t.string   "number_of_beds"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.string   "main_image_file_name"
+    t.string   "main_image_content_type"
+    t.integer  "main_image_file_size"
+    t.datetime "main_image_updated_at"
   end
 
   create_table "users", :force => true do |t|
