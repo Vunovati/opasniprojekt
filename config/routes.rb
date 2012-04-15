@@ -1,12 +1,15 @@
 Opasniprojekt::Application.routes.draw do
-<<<<<<< HEAD
+  get "static_pages/home"
+
   resources :users
   resources :accomodations
   resources :sessions, only: [:new, :create, :destroy]
   
   #root :to => 'accomodations#new'
+  root to: 'static_pages#home'
 
-  root :to => 'accomodations#index'
+  #root :to => 'accomodations#index'
+  match '/accomodations', to: 'accomodations#index'
 
  # get "users/new"
 
