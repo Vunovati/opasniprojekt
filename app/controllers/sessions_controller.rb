@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       sign_in user
       redirect_back_or user
     else
-     flash.now[:error] = 'Neispravan email ili lozinka'
+     flash.now[:error] = t 'incorrect_credentials'
      render 'new'
     end 
   end

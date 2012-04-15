@@ -21,12 +21,22 @@
 				<%= link_to "ZimmerFrei", accomodations_path, :class => "brand" %>
 				<div class="nav-collapse">
 					<ul class="nav">
-						<li><%= link_to "Browse Accomodations", accomodations_path %></li>
-						<li><%= link_to "Sign up", signup_path %></li>
-						<li><%= link_to "Sign in", signin_path %></li>
+						<li><%= link_to t(:accomodations_index), accomodations_path %></li>
+						<li><%= link_to t(:users_index), users_path %></li>
 						<li class="dropdown">
-						</ul>
-					</div>
+					</ul>
+				</div>
+					<ul class="nav pull-right">
+							<% if current_user %>
+							<li>
+									<%= link_to "Sign Out: #{current_user.name}", signout_path%>
+							</li>
+							<% else %>
+									<li><%= link_to "Sign up", signup_path %></li>
+									<li><%= link_to "Sign in", signin_path%></li>
+							<% end %>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>

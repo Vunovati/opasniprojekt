@@ -31,7 +31,7 @@ class Accomodation < ActiveRecord::Base
 							         :numericality => true
 	validates :adress_line,          :presence => true, :uniqueness => { :case_sensitive => false }
 
-	validates_attachment_presence :main_image
+	# validates_attachment_presence :main_image
 
 
 	self.per_page = 10 # number of accomodations paginated

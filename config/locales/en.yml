@@ -1,5 +1,8 @@
 en:
   accomodation: "Accomodation"
+  accomodations_index: "Accomodations list"
+  users_index: "Users list"
+  incorrect_credentials: "Incorrect email or password"
   formtastic:
     titles:
       sign_up: "Sign up"
@@ -15,7 +18,7 @@ en:
         accomodates:           "Accomodates"
         accomodation_type:     "Accomodation type"
         nightly_rate:          "Nightly rate"
-        adress_line:           "Adress line"
+        adress_line:           "Address line"
         country:               "Country"
         city:                  "City"
         zip_code:              "Zip code"

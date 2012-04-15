@@ -1,5 +1,8 @@
 hr:
   accomodation: "Smještaj"
+  accomodations_index: "Popis smještaja"
+  users_index: "Popis korisnika"
+  incorrect_credentials: "Neispravna email adresa ili lozinka"
   formtastic:
     titles:
       sign_up: "Registriracija"
