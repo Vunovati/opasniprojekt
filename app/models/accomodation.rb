@@ -34,7 +34,7 @@ class Accomodation < ActiveRecord::Base
 	validates_attachment_presence :main_image
 
 
-	self.per_page = 10 # number of recorings paginated
+	self.per_page = 10 # number of accomodations paginated
 end
 # == Schema Information
 #

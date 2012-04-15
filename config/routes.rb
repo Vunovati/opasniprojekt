@@ -1,5 +1,5 @@
 Opasniprojekt::Application.routes.draw do
-<<<<<<< HEAD
+
   resources :users
   resources :accomodations
   resources :sessions, only: [:new, :create, :destroy]
