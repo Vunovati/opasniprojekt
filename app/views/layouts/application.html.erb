@@ -1,7 +1,9 @@
+<% provide(:title, "Zimmer Frei") %>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Zimmer Frei</title>
+  <!-- <title>Zimmer Frei</title> -->
+  <title><%= yield(:title) %></title>
 	<%= stylesheet_link_tag    "application" %>
 	<%= javascript_include_tag "application" %>
 	<%= csrf_meta_tags %>

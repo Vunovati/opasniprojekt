@@ -1,4 +1,7 @@
 <% provide(:title, @user.name + ' ' + @user.surname) %>
+<head>
+  <title><%= yield(:title) %> </title>
+</head>
 <div class="row">
   <aside class="span4">
     <section>

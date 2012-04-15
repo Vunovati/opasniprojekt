@@ -1,6 +1,8 @@
-<%= provide(:title, 'Sign up') %>
+<head>
+  <title><%= yield(:title) %></title>
+</head>
 <h1><%=t 'sign_up' %></h1>
-  
+
 <div class="form">
   <%= render 'shared/error_messages' %>
   <div class="control-group">
