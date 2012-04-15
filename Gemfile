@@ -25,7 +25,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem 'formtastic'
+gem 'formtastic-bootstrap'
 gem 'bootstrap-will_paginate'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.1'
@@ -44,19 +45,20 @@ group :development do
   gem 'gollum'
   gem 'RedCloth'
   gem 'annotate', '2.4.1.beta1'
-  gem 'rspec-rails', '2.9.0'
-  gem 'guard-rspec', '0.5.5'
+  gem 'faker', '0.3.1'
 end
 
+
+gem "rspec-rails", :group => [:test, :development]
 # Test gems on Linux
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
   gem 'factory_girl_rails', '1.4.0'
   gem 'capybara', '1.1.2'
+  gem 'guard-rspec', '0.5.5'
   gem 'rb-inotify', '0.8.8'
   gem 'libnotify', '0.5.9'
-  gem 'rspec-rails', '2.9.0'
 end 
 
 group :production do

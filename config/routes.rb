@@ -1,9 +1,14 @@
 Opasniprojekt::Application.routes.draw do
+<<<<<<< HEAD
   resources :users
   resources :accomodations
   resources :sessions, only: [:new, :create, :destroy]
   
-  root :to => 'accomodations#new'
+  #root :to => 'accomodations#new'
+
+  root :to => 'accomodations#index'
+
+ # get "users/new"
 
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
