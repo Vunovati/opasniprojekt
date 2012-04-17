@@ -2,7 +2,7 @@
 
 <%= semantic_form_for @accomodation, :html => { :class => 'form-horizontal' } do |f| %>
   <%= f.inputs :name => "Basic Options", :id => "basic" do %>
-      <%= f.input :property_type, :collection => ["Appartment", "House", "Cabin", "Villa", "Hotel"], :label => "Property type", :hint => "Type of property where accomodation is in"%>
+      <%= f.input :property_type, :collection => ["Appartment", "House", "Cabin", "Villa", "Hotel"], :label => "Property type", :hint => "What type of property is it"%>
       <%= f.input :accomodation_type, :collection => ["Private room", "Shared room"], :label => "Accomodation type", :hint => "Where the guests will be staying"%>
       <%= f.input :accomodates, :hint => "Maximum number of guests" %>
       <%= f.input :nightly_rate, :as => :number %>
@@ -17,7 +17,7 @@
       <%= f.input :number_of_bathrooms, :as => :range %>
       <%= f.input :number_of_bedrooms, :as => :range %>
       <%= f.input :number_of_beds, :as => :range %>
-      <%= f.input :pets_allowed, :as => :radio, :collection => ["Yes!", "No"] %>
+      <%= f.input :pets_allowed, :as => :radio, :label => "Pets allowed", :collection => [["Yes", true], ["No", false]] %>
   <% end %>
   <%= f.buttons do %>
       <%= f.commit_button :submit, :button_html => { :class => "btn btn-primary", :disable_with => 'Wait...' } %>

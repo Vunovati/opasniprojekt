@@ -16,16 +16,16 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<%= link_to "ZimmerFrei", accomodations_path, :class => "brand" %>
+				<%= link_to "ZimmerFrei", root_path, :class => "brand" %>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li><%= link_to "Browse Accomodations", accomodations_path %></li>
                         <% if signed_in? %>
-                          <li><%= link_to "Sign out", '#' %><li>
+                          <li><%= link_to "Sign out", signout_path, method: "delete" %><li>
                         <% else %>
                           <li><%= link_to "Sign in", signin_path %></li>
+						  <li><%= link_to "Sign up", signup_path %></li>
                         <% end %>
-						<li><%= link_to "Sign up", signup_path %></li>
 						<li class="dropdown">
 					</ul>
 				</div>
@@ -40,7 +40,7 @@
 					<%= yield %>
 				</div>
 				<div class="span3">
-					Some commertial stuff
+					Some commercial stuff
 				</div>
 			</div>
 		</div>
