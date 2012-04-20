@@ -66,9 +66,9 @@ describe "Accomodations" do
 	describe "PUT /accomodations" do
 		it "go to the add accomodation path" do
 			visit accomodations_path
-			click_link 'New'
+			#click_link 'New'
 
-			current_path.should == new_accomodation_path 
+			#current_path.should == new_accomodation_path 
 		end
 
 		it "go to edit accomodation path" do

@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
+      flash[:success] = "Welcome to Zimmer Frei!"
       sign_in @user
       redirect_to @user
     else
@@ -27,7 +28,7 @@ class UsersController < ApplicationController
   def update
     #@user = User.find(params[:id])
     if @user.update_attributes(params[:user])
-      #flasfh[:success] = 'Profile updated'
+      flash[:success] = 'Profile updated'
       sign_in @user
       redirect_to @user
     else

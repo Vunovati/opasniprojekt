@@ -26,11 +26,19 @@ describe "StaticPages" do
         it {should have_selector('h1', text: 'Sign in')}
       end
 
-      describe "signed user should be able to register a place" do
+      describe " it should have register your place link" do
         let(:user){FactoryGirl.create(:user)}
         before {sign_in user}
 
-        it {should have_link('Register your place', href: accomodations_path)}
+        it {should have_link('Register your place', href: register_place_path)}
+      end
+
+      describe "signed user should be able to register a place" do
+        let(:user) {FactoryGirl.create(:user)}
+        before {sign_in user}
+        before {click_link "Register your place"}
+
+        it {should have_selector('legend', text: "New Accomodation")}
       end
     end
   end
