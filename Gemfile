@@ -62,6 +62,6 @@ group :test do
   gem 'libnotify', '0.5.9'
 end 
 
-# group :production do
-#   gem 'pg', '0.12.2'
-# end
+group :production do
+  gem 'pg', '0.12.2'
+end
