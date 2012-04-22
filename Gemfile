@@ -28,6 +28,7 @@ gem 'jquery-rails'
 gem 'formtastic'
 gem 'formtastic-bootstrap'
 gem 'bootstrap-will_paginate'
+gem 'paperclip', "~> 3.0"
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.1'
 

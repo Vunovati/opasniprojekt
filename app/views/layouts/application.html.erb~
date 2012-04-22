@@ -42,7 +42,24 @@
 						  <li><%= link_to "Sign up", signup_path %></li>
                         <% end %>
                         <!-- <li class="dropdown"> -->
-
+=======
+					<ul class="nav">
+						<li><%= link_to t(:accomodations_index), accomodations_path %></li>
+						<li><%= link_to t(:users_index), users_path %></li>
+						<li class="dropdown">
+					</ul>
+				</div>
+					<ul class="nav pull-right">
+							<% if current_user %>
+							<li>
+									<%= link_to "Sign Out: #{current_user.name}", signout_path%>
+							</li>
+							<% else %>
+									<li><%= link_to "Sign up", signup_path %></li>
+									<li><%= link_to "Sign in", signin_path%></li>
+							<% end %>
+						</li>
+>>>>>>> fd6d4a35dbe6267b938154ed3d8b0a582aba0682
 					</ul>
 				</div>
               </nav>
@@ -58,9 +75,14 @@
 						<%= yield %>
 					</div>
 				</div>
+				<div class="span3">
+<<<<<<< HEAD
+					Some commercial stuff
+=======
 					<div class="well">
-						Some commercial stuff
+						Some commertial stuff
 					</div>
+>>>>>>> fd6d4a35dbe6267b938154ed3d8b0a582aba0682
 				</div>
 			</div>
 		</div>

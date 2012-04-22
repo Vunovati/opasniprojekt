@@ -8,8 +8,12 @@
 
 <p>
   <b>Address</b><br>
-  <%= @accomodation.adress_line %>, <%= @accomodation.zip_code %>, <%= @accomodation.city %>, <%= @accomodation.country %>, 
+  <%= @accomodation.adress_line %>, <%= @accomodation.zip_code %>, <%= @accomodation.city %>, <%= @accomodation.country %> 
 </p>
+
+
+<%= image_tag @accomodation.main_image.url(:medium), :class => 'thumbnail' %>
+
 
 <div class="form-actions">
   <%= link_to 'Back', accomodations_path, :class => 'btn'  %>
