@@ -24,22 +24,22 @@ describe "UserPages" do
 
     describe "with invalid information" do
       it "should not create a user" do
-        expect {click_button "Create my account"}.not_to change(User, :count)
+        expect {click_button "Create User"}.not_to change(User, :count)
       end
     end
 
     describe "with valid information" do
       before do
-        fill_in "Name", with: "Example"
-        fill_in "Surname", with: "User"
-        fill_in "Email", with: "user@example.com"
-        fill_in "Password", with: "foobar"
-        fill_in "Confirmation", with: "foobar"
+        fill_in "user_name", with: "Example"
+        fill_in "user_surname", with: "User"
+        fill_in "user_email", with: "user@example.com"
+        fill_in "user_password", with: "foobar"
+        fill_in "user_password_confirmation", with: "foobar"
       end
 
       it "should create a user" do
         expect do
-          click_button "Create my account"
+          click_button "Create User"
         end.to change(User, :count).by(1)
       end
 
@@ -73,7 +73,7 @@ describe "UserPages" do
       let(:new_surname) {"New_Surname"}
       let(:new_email) {"new@example.com"}
       before do
-        fill_in "Name", with: new_name
+        fill_in "user_name", with: new_name
         fill_in "Surname", with: new_surname
         fill_in "Email", with: new_email
         fill_in "Password", with: user.password

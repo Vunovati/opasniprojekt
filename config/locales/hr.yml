@@ -3,9 +3,10 @@ hr:
   accomodations_index: "Popis smještaja"
   users_index: "Popis korisnika"
   incorrect_credentials: "Neispravna email adresa ili lozinka"
+  sign_up: "Registriracija"
+  sign_in: "Prijava"
   formtastic:
     titles:
-      sign_up: "Registriracija"
     labels:
       user:
         name:                  "Ime"

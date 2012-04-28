@@ -3,9 +3,10 @@ en:
   accomodations_index: "Accomodations list"
   users_index: "Users list"
   incorrect_credentials: "Incorrect email or password"
+  sign_up: "Sign up"
+  sign_in: "Sign in"
   formtastic:
     titles:
-      sign_up: "Sign up"
     labels:
       user:
         name:                  "First name"
