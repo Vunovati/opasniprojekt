@@ -1,7 +1,5 @@
-<head>
-  <title><%= yield(:title) %></title>
-</head>
-<h1><%=t 'sign_up' %></h1>
+<%= provide(:title, ' | Sign up') %>
+<h1>Sign up</h1>
 
 <div class="form">
   <%= render 'shared/error_messages' %>

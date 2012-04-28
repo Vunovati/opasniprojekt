@@ -1,19 +1,23 @@
 Opasniprojekt::Application.routes.draw do
+  #get "static_pages/home"
 
   resources :users
   resources :accomodations
   resources :sessions, only: [:new, :create, :destroy]
   
   #root :to => 'accomodations#new'
+  root to: 'static_pages#home'
 
-  root :to => 'accomodations#index'
+  #root :to => 'accomodations#index'
+  match '/accomodations', to: 'accomodations#index'
 
  # get "users/new"
 
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
-  #match '/signout', to: 'sessions#destroy', via: delete
-  match '/signout', to: 'sessions#destroy'
+  match '/signout', to: 'sessions#destroy', via: :delete
+
+  match '/register_place', to: 'accomodations#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

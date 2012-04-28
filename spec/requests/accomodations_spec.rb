@@ -40,6 +40,13 @@ describe "Accomodations" do
   end
 
 
+	#describe "PUT /accomodations" do
+		#it "go to the add accomodation path" do
+		#	visit accomodations_path
+			#click_link 'New'
+
+			#current_path.should == new_accomodation_path 
+		#end
   describe "GET /accomodations/new" do
     it "create a new accomodation" do
       visit new_accomodation_path
@@ -64,12 +71,12 @@ describe "Accomodations" do
   end
 
   describe "PUT /accomodations" do
-    it "go to the add accomodation path" do
-      visit accomodations_path
-      click_link 'New'
+    #it "go to the add accomodation path" do
+      #visit accomodations_path
+      #click_link 'New'
 
-      current_path.should == new_accomodation_path
-    end
+      #current_path.should == new_accomodation_path
+    #end
 
     it "go to edit accomodation path" do
       visit accomodations_path
